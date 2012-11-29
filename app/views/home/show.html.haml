@@ -24,7 +24,7 @@
           -@companies.last(3).each do |c|
             %li
               = link_to(c.name, c)
-              %span.specialities= c.specialities.try(:join, ',')
+              %span.specialities= c.specialities.try(:join, ', ')
     .third
       .title.three
         %i.icon-random.blue-icon.left
@@ -33,7 +33,7 @@
           -@companies.sample(3).each do |c|
             %li
               = link_to(c.name, c)
-              %span.specialities= c.specialities.try(:join, ',')
+              %span.specialities= c.specialities.try(:join, ', ')
       =link_to "Alle bedrijven...", companies_path, class: "right"
 
   %section.whole.paperpile.personen
