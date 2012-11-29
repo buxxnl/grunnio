@@ -28,9 +28,9 @@
         %dt Twitter:
         %dd= @company.card.twitter_username.blank? ? "-" : link_to("@#{@company.card.twitter_username}", "http://twitter.com/#{@company.card.twitter_username}")
         %dt Website:
-        %dd= @company.card.website_url.blank? ? "-" : link_to("#{@company.card.website_url}", @company.card.website_url)
+        %dd= @company.card.website_url.blank? ? "-" : link_to("#{@company.card.website_url}", @company.card.link_to_website)
         %dt Blog:
-        %dd= @company.card.blog_url.blank? ? "-" : link_to("#{@company.card.blog_url}", @company.card.blog_url)
+        %dd= @company.card.blog_url.blank? ? "-" : link_to("#{@company.card.blog_url}", @company.card.link_to_blog)
         %dt Telefoon:
         %dd= dash(@company.card.phone)
 

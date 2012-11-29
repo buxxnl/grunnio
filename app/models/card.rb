@@ -38,4 +38,18 @@ class Card < ActiveRecord::Base
   def strip_twitter_username
     twitter_username.gsub!("@","")
   end
+
+  def link_to_website
+    http_site self.website_url
+  end
+
+  def link_to_blog
+    http_site self.blog_url
+  end
+
+  private
+  def http_site website
+    return "http://#{website}" unless website.starts_with?("http") || website.starts_with?("http")
+    website
+  end
 end

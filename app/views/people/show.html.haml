@@ -22,9 +22,9 @@
         %dt Twitter:
         %dd= @person.card.twitter_username.blank? ? "-" : link_to("@#{@person.card.twitter_username}", "http://twitter.com/#{@person.card.twitter_username}")
         %dt Website:
-        %dd= @person.card.website_url.blank? ? "-" : link_to("#{@person.card.website_url}", @person.card.website_url)
+        %dd= @person.card.website_url.blank? ? "-" : link_to("#{@person.card.website_url}", @person.card.link_to_website)
         %dt Blog:
-        %dd= @person.card.blog_url.blank? ? "-" : link_to("#{@person.card.blog_url}", @person.card.blog_url)
+        %dd= @person.card.blog_url.blank? ? "-" : link_to("#{@person.card.blog_url}", @person.card.link_to_blog)
         %dt Telefoon:
         %dd= dash(@person.card.phone)
         %dt Bedrijven:
