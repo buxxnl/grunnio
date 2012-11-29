@@ -9,7 +9,7 @@
     = f.input :specialities, input_html: {value: @person.specialities.join(","), data:{ specialities: Person.popular_tags_list } , type: "hidden" }, hint: "max. 5"
     = f.input :avatar, as: :file
     = f.input :avatar_cache, as: :hidden
-    = f.input :birthdate, as: :date
+    = f.input :birthdate, as: :date, start_year: Time.now.year - 100, end_year: Time.now.year
     = f.association :companies, collection: Company.published
     %a.company-link.btn.tiny.right{ "data-reveal-id" => "companyModal", :href => "#" }
       %i.sweets-plus
