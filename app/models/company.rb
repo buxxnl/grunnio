@@ -66,9 +66,9 @@ class Company < ActiveRecord::Base
   validates :kvk_number, length: { is: 8 }, numericality: { only_integer: true }, allow_blank: true, uniqueness: true
   validates :number_of_employees, numericality: { only_integer: true }, allow_blank: true
 
-def self.popular_tags_list
-  tags ||= Company.tags.collect(&:name).sort
-  tags
-end
+  def self.popular_tags_list
+    tags ||= Company.tags.collect(&:name).sort
+    tags
+  end
 
 end
