@@ -58,7 +58,7 @@
           -@people.last(3).each do |p|
             %li
               = link_to(p.name, p)
-              %span.specialities= p.specialities.try(:join, ',')
+              %span.specialities= p.specialities.try(:join, ', ')
 
     .third
       .title.three
@@ -68,7 +68,7 @@
           -@people.sample(3).each do |p|
             %li
               = link_to(p.name, p)
-              %span.specialities= p.specialities.try(:join, ',')
+              %span.specialities= p.specialities.try(:join, ', ')
       =link_to "Alle personen...", people_path, class: "right"
 
 
@@ -89,7 +89,7 @@
           -@initiatives.last(3).each do |i|
             %li
               = link_to(i.name, i)
-              // %span.specialities= p.specialities.try(:join, ',')
+              // %span.specialities= p.specialities.try(:join, ', ')
     .third
       .title.three
         %i.icon-random.blue-icon.left
